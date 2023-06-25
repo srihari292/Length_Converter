@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+  }
+  
+  body {
+    height: 100vh;
+    /* background: linear-gradient(rgb(107, 107, 107), #95b2b0); */
+    /* background: linear-gradient(rgb(107, 107, 107), #212517); */
+    background-color: #545c40;
+  }
+  #container {
+    border: 0.4rem #759242 solid;
+    border-radius: 5em;
+    /* background-color: #c6ebbe; */
+    /* background-color: #7384416f; */
+    background-color: #ded3a6;
+    color: #020887;
+    /* color: #f2f2ef; */
+    /* color: #374709; */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    margin: auto;
+    width: 35%;
+  
+    padding: 2em;
+  
+    box-shadow: 2px 3px 6px 10px black;
+  }
+  
+  #container h1 {
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size:2rem;
+  }
+  
+  form {
+    padding: 0.5em;
+  }
+  fieldset {
+    /* border: solid black; */
+    border: none;
+    padding: 0.4em;
+    margin: 0.8em;
+  }
+  
+  #convert-btn {
+    display:block;
+    width: 50%;
+    font-size: 1.3rem;
+    margin: auto;
+    border-radius: 0.4em;
+  }
+  #convert-btn:hover {
+    border-radius: 3em;
+    background-color: #000000;
+    color: white;
+    box-shadow: 3px 3px 10px 5px grey;
+  }
+  #convert-btn:active {
+    box-shadow:none;
+  }
+  
+  /* ----------legend----------------------- */
+  legend {
+    border-bottom: #759242 double 0.2em;
+    font-size: 1.5rem;
+  }
+  legend sub {
+    border: black solid 2px;
+    border-radius: 50%;
+    width: 1em;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.7rem;
+    cursor:help;
+  }
+  
+  legend #tooltip-info {
+    font-size: 0.9rem;
+    border-radius: 2em;
+    background-color: #3f4433;
+    display: none;
+    color: white;
+    padding: 0.2em;
+  }
+  legend span:hover ~ #tooltip-info {
+    display: inline-block;
+  }
+  
+  /* ------------select---------------------- */
+  select {
+    width: 40%;
+    font-size: 1rem;
+  }
+  select:hover,
+  select:focus {
+    background-color: rgb(223, 216, 205);
+  }
+  
+  /* -------------input box---------------- */
+  #from,
+  #to {
+    width: 50%;
+    font-size: 1rem;
+  }
+  #from:focus {
+    background-color: #c6f3ff;
+  }
+  
+  #exception-message {
+    margin-top: 1em;
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  @media screen and (300px < width < 650px) {
+    #container {
+      width: 95%;
+    }
+    legend {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (width<=300px) {
+    #container {
+      width: 97%;
+    }
+    legend {
+      font-size: 1rem;
+    }
+    select {
+      display: block;
+      width: 100%;
+    }
+    #from,
+    #to {
+      width: 100%;
+      display: block;
+    }
+  }

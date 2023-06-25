@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Length Converter</h1>
+
+      <form name="convert-form">
+        <fieldset id="from-fieldset">
+          <legend>
+            From <span><sub>i</sub></span> <span id="tooltip-info">max decimal places is 10</span>
+          </legend>
+
+          <label for="from"></label>
+          <input type="number" step="0.0000000001" name="from" id="from" pattern="([0-9]*)?([.]([0-9]{1,6}))?" title="only digits allowed " />
+          <select name="from-unit" id="from-unit" required>
+            <option value="" selected disabled>From</option>
+            <option value="cm">Centimeter</option>
+            <option value="m">Meter</option>
+            <option value="mm">Millimeter</option>
+            <option value="km">Kilometer</option>
+            <option value="ft">Feet</option>
+            <option value="y">Yard</option>
+            <option value="mile">Miles</option>
+            <option value="in">Inch</option>
+          </select>
+        </fieldset>
+
+        <fieldset id="to-fieldset">
+          <legend>To</legend>
+          <label for="to"></label>
+          <input type="text" name="to" id="to" disabled />
+          <select name="to-unit" id="to-unit" required>
+            <option value="" selected disabled>To</option>
+            <option value="cm">Centimeter</option>
+            <option value="m">Meter</option>
+            <option value="mm">Millimeter</option>
+            <option value="km">Kilometer</option>
+            <option value="ft">Feet</option>
+            <option value="y">Yard</option>
+            <option value="mile">Miles</option>
+            <option value="in">Inch</option>
+          </select>
+        </fieldset>
+
+        <!-- <input type="submit" id="convert-btn" value="Convert" onsubmit="" />
+        onsubmit will change the bydefault behaviour of submit button -->
+        <button id="convert-btn" onclick="computeResult(this.form);return false">Convert</button>
+
+        <!-- return false is used to stop refreshing of page -->
+      </form>
+
+      <p id="exception-message"></p>
+    </div>
+  </body>
+</html>
